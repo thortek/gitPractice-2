@@ -1,7 +1,46 @@
+:root {
+    box-sizing: border-box;
+    background: yellow;
+    --main-color: hotpink;
+    overflow: hidden;
+}
+
 h1 {
-    color: rgba(19, 8, 94, 0.687);
+    color: rgba(40, 19, 182, 0.687);
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
 }
 
 h4 {
     background-color: crimson;
+    color: var(--main-color);
+}
+
+.container {
+    display: flex;
+    height: 300px;
+}
+
+.item {
+    height: 100px;
+    /* width: 100px; */
+    background: var(--main-color);
+    flex: 1;
+    align-self: center;
+}
+
+.item-center {
+    flex: 4;
+    background-color: blue;
 }
